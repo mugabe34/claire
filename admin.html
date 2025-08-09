@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - cl.crochets</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧶</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">cl.crochets</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shop.html" class="nav-link">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link cart-icon">
+                        🛒 <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <button class="admin-btn active">Admin</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="admin-header">
+        <div class="container">
+            <h1 class="page-title">Admin Dashboard</h1>
+            <p class="page-subtitle">Manage your products and view sales data</p>
+        </div>
+    </section>
+
+    <section class="admin-content">
+        <div class="container">
+            <div class="admin-section">
+                <h2>Sales Overview</h2>
+                <div class="sales-grid">
+                    <div class="sales-card">
+                        <h3>Total Sales</h3>
+                        <p class="sales-number">$2,450.00</p>
+                    </div>
+                    <div class="sales-card">
+                        <h3>Orders</h3>
+                        <p class="sales-number">24</p>
+                    </div>
+                    <div class="sales-card">
+                        <h3>Products</h3>
+                        <p class="sales-number">6</p>
+                    </div>
+                    <div class="sales-card">
+                        <h3>Customers</h3>
+                        <p class="sales-number">18</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-section">
+                <h2>Product Management</h2>
+                <div class="admin-grid">
+                    <div class="add-product-section">
+                        <h3>Add New Product</h3>
+                        <form id="addProductForm" class="admin-form">
+                            <div class="form-group">
+                                <label for="productName">Product Name *</label>
+                                <input type="text" id="productName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productPrice">Price ($) *</label>
+                                <input type="number" id="productPrice" name="price" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productCategory">Category *</label>
+                                <select id="productCategory" name="category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="scarf">Scarf</option>
+                                    <option value="hat">Hat</option>
+                                    <option value="sweater">Sweater</option>
+                                    <option value="accessory">Accessory</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="productColor">Color</label>
+                                <select id="productColor" name="color">
+                                    <option value="">Select Color</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="green">Green</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="white">White</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="productImage">Image URL *</label>
+                                <input type="url" id="productImage" name="image" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productDescription">Description *</label>
+                                <textarea id="productDescription" name="description" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="admin-submit-btn">Add Product</button>
+                        </form>
+                    </div>
+
+                    <div class="products-table-section">
+                        <h3>Current Products</h3>
+                        <div class="table-container">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Category</th>
+                                        <th>Sales</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productsTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>cl.crochets</h3>
+                    <p>Handmade with love and care. Quality crochet items for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: hello@clcrochets.com</p>
+                    <p>Phone: +250 788 313 509</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cl.crochets/" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 cl.crochets. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

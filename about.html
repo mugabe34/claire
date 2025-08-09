@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - cl.crochets</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧶</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">cl.crochets</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shop.html" class="nav-link">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link cart-icon">
+                        🛒 <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <button class="admin-btn" onclick="openAdminLogin()">Admin</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Login Modal -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-modal-content">
+            <span class="admin-close" onclick="closeAdminLogin()">&times;</span>
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm" class="admin-login-form">
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <input type="text" id="adminUsername" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" name="password" required>
+                </div>
+                <button type="submit" class="admin-login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="about-header">
+        <div class="container">
+            <h1 class="page-title">About cl.crochets</h1>
+            <p class="page-subtitle">Our story of passion, creativity, and handmade love</p>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Welcome to cl.crochets, where every stitch tells a story of love and dedication. Founded by Claire, a passionate crochet artist with over 10 years of experience, our brand was born from a simple desire to share the beauty of handmade creations with the world.</p>
+                    
+                    <p>What started as a hobby in Claire's cozy living room has grown into a beloved small business that brings joy to customers worldwide. Each piece in our collection is carefully crafted by hand, using only the finest yarns and materials.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>At cl.crochets, we believe that handmade items carry a special kind of magic. Our mission is to create beautiful, high-quality crochet pieces that not only keep you warm and stylish but also bring a sense of comfort and connection to the art of handcrafting.</p>
+                    
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li><strong>Quality:</strong> Every piece is made with attention to detail and premium materials</li>
+                        <li><strong>Sustainability:</strong> We use eco-friendly yarns and sustainable practices</li>
+                        <li><strong>Community:</strong> Supporting local artisans and building connections</li>
+                        <li><strong>Creativity:</strong> Each design is unique and thoughtfully created</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="Handmade crochet items">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">How We Create</h2>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">🧶</div>
+                    <h3>Design</h3>
+                    <p>Each design starts with inspiration and careful planning, ensuring every piece is both beautiful and functional.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">✋</div>
+                    <h3>Craft</h3>
+                    <p>Handcrafted with love using traditional crochet techniques and premium yarns for the best quality.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">✨</div>
+                    <h3>Finish</h3>
+                    <p>Every piece is carefully finished, inspected, and packaged with care before reaching your hands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>cl.crochets</h3>
+                    <p>Handmade with love and care. Quality crochet items for everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: hello@clcrochets.com</p>
+                    <p>Phone: +250 788 313 509</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cl.crochets/" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 cl.crochets. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
