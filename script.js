@@ -26,7 +26,7 @@ const products = [
         price: 45.00,
         category: "accessory",
         color: "yellow",
-        image: "images/cozy.jpg",
+        image: "images/scarf.jpg",
         description: "A gentle and warm blanket perfect for little ones.",
         sales: 8
     },
@@ -36,7 +36,7 @@ const products = [
         price: 85.00,
         category: "sweater",
         color: "green",
-        image: "images/cozy.jpg",
+        image: "images/cardigan.jpg",
         description: "A beautiful handcrafted cardigan for any occasion.",
         sales: 6
     },
